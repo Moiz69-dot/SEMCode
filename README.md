@@ -4,4 +4,4 @@
 
 ![Develop Build](https://img.shields.io/github/actions/workflow/status/Moiz69-dot/SEMCode/main.yml?branch=develop)
 
-![License](https://img.shields.io/github/license/Moiz69-dot/SEMCode)
+![License](https://img.shields.io/github/license/Moiz69-dot/SEMCode?label=license)
