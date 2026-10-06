@@ -1,7 +1,7 @@
 # SEMCode
 
-![workflow](https://github.com/Moiz69-dot/SEMCode/actions/workflows/main.yml/badge.svg)
+![Master Build](https://github.com/Moiz69-dot/SEMCode/actions/workflows/main.yml/badge.svg?branch=master)
 
-![GitHub Workflow Status (develop)](https://img.shields.io/github/actions/workflow/status/Moiz69-dot/SEMCode/main.yml?branch=develop)
+![Develop Build](https://img.shields.io/github/actions/workflow/status/Moiz69-dot/SEMCode/main.yml?branch=develop)
 
-hello world
+![License](https://img.shields.io/github/license/Moiz69-dot/SEMCode)
