@@ -97,9 +97,37 @@ public class Main {
             return null;
         }
     }
-    public static void main(String[] args) {
+    public void displayEmployee(Employee emp)
+    {
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        // Create new Application
         Main app = new Main();
+
+        // Connect to database
         app.connect();
+
+        // Get Employee
+        Employee emp = app.getEmployee(255530);
+
+        // Display results
+        app.displayEmployee(emp);
+
+        // Disconnect from database
         app.disconnect();
     }
+
 }
