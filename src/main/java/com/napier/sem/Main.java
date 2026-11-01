@@ -65,19 +65,23 @@ public class Main {
             }
         }
     }
+
     public Employee getEmployee(int ID)
     {
         try
         {
             // Create an SQL statement
             Statement stmt = con.createStatement();
+
             // Create string for SQL statement
             String strSelect =
                     "SELECT emp_no, first_name, last_name "
                             + "FROM employees "
                             + "WHERE emp_no = " + ID;
+
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
+
             // Return new employee if valid.
             // Check one is returned
             if (rset.next())
@@ -98,6 +102,7 @@ public class Main {
             return null;
         }
     }
+
     public void displayEmployee(Employee emp)
     {
         if (emp != null)
@@ -152,25 +157,37 @@ public class Main {
             return null;
         }
     }
+
     /**
      * Prints a list of employees.
      * @param employees The list of employees to print.
      */
     public void printSalaries(ArrayList<Employee> employees) {
+
+        if (employees == null)
+        {
+            System.out.println("No employees");
+            return;
+        }
+
         // Print header
         System.out.println(String.format("%-10s %-15s %-20s %-8s",
                 "Emp No", "First Name", "Last Name", "Salary"));
 
         // Loop over all employees in the list
         for (Employee emp : employees) {
+
+            // Skip null employees
+            if (emp == null)
+                continue;
+
             String emp_string =
                     String.format("%-10s %-15s %-20s %-8s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary);
+
             System.out.println(emp_string);
         }
     }
-
-
 
     public static void main(String[] args)
     {
@@ -190,6 +207,4 @@ public class Main {
         // Disconnect from database
         app.disconnect();
     }
-
-
 }
